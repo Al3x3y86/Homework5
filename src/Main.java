@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         // Задание 1
         System.out.println("Задание 1");
-        int clientOS = 0;
+        int clientOS = 1;
         if (clientOS > 0) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else {
@@ -24,11 +24,8 @@ public class Main {
 
         // Задание 3
         System.out.println("Задание 3");
-        int year = 2020;
-        if ((year % 4 == 0) && year % 100 != 0) {
-            System.out.println (year + " год является високосным");
-        }
-        else if ((year % 4 == 0) && (year % 100 == 0) && (year % 400 == 0)) {
+        int year = 2024;
+        if ( year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println (year + " год является високосным");
         } else  {
             System.out.println (year + " год не является високосным");
@@ -36,15 +33,15 @@ public class Main {
 
         // Задание 4
         System.out.println("Задание 4");
-        int deliveryDistance = 59;
+        int deliveryDistance = 60;
         int oneDay = 1;
         int twoDays = 2;
         int threeDays = 3;
         if (deliveryDistance < 20) {
             System.out.println("Потребуется дней: " + oneDay);
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
             System.out.println("Потребуется дней: " + twoDays);
-        } else if (deliveryDistance > 60 && deliveryDistance < 100) {
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             System.out.println("Потребуется дней: " + threeDays);
         }
 
